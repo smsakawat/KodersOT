@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
+    if (
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('white')
+    } else {
+      document.documentElement.classList.remove('white')
+    }
+  </script>
+  <script src="js/script.js" defer></script>
+  <title>KodersOT</title>
+</head>
+
+<body class="dark:bg-darkBlue dark:text-white font-opensans">
+  <!-- Header -->
+  <header class="container mx-auto mt-10 px-6 text-center h-40 md:h-20">
+    <!-- Dynamic Logo -->
+    <div
+      class="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10">
+    </div>
+    <!-- Menu -->
+    <div class="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10">
+      <a href="#about" class="hover:text-accentCyan">About Us</a>
+      <a href="#features" class="hover:text-accentCyan">Features</a>
+      <a href="#testimonials" class="hover:text-accentCyan">Testimonials</a>
+
+      <!-- Dark/Light Mode Button -->
+      <button id="theme-toggle"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 5">
+        <!-- Dark SVG Icon -->
+        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <!-- Light SVG Icon -->
+        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom">
+    <!-- Hero Container -->
+    <div class="container mx-auto px-6 text-center md:pt-20 pb-52">
+      <img src="images/illustration-intro.png" alt="" class="mx-auto" />
+      <h1 class="max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl">
+        KodersOT Innovations Begin From Here
+      </h1>
+      <p class="max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg">
+        Transforming Ideas into Reality with Expert Web and Mobile Development Services, Custom Software Solutions, and
+        Enterprise Resource Planning Development.
+      </p>
+      <button class="p-3 rounded-full w-52 bg-accentCyan hover:scale-95">
+        Read More
+      </button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="pt-12 bg-gray-50 dark:bg-darkBlue1">
+    <!-- Features Container -->
+    <div class="container mx-auto px-6 pb-32">
+      <!-- First Row -->
+      <div class="flex flex-col space-y-24 text-center md:flex-row md:space-y-0">
+        <!-- Item 1 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="images/icon-access-anywhere.svg" alt="" />
+          </div>
+          <h3 class="text-xl font-bold">Custom software development</h3>
+          <p class="max-w-md">
+            With our custom web development services, you can tailor your digital presence by creating unique websites
+            and online
+            apps that are aligned with your company's goals.
+          </p>
+        </div>
+        <!-- Item 2 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="images/icon-security.svg" alt="" />
+          </div>
+          <h3 class="text-xl font-bold">Web application development</h3>
+          <p class="max-w-md">
+            We offer secure networks and intelligent guidance for product or service selection. Our scalable,
+            distributed, and
+            secure web applications, compatible with any OS, browser, and device.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="flex flex-col space-y-24 mt-28 text-center md:flex-row md:space-y-0">
+        <!-- Item 3 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="images/icon-collaboration.svg" alt="" />
+          </div>
+          <h3 class="text-xl font-bold">Mobile application development</h3>
+          <p class="max-w-md">
+            We offer mobile application that allow users to have easy functional access to information, products,
+            services, and
+            processes that they need in real-time and are optimized for hands-on connectivity and interaction.
+          </p>
+        </div>
+        <!-- Item 4 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="images/icon-any-file.svg" alt="" />
+          </div>
+          <h3 class="text-xl font-bold">AI development</h3>
+          <p class="max-w-md">
+            AI-powered applications tailored to meet the unique needs of businesses across various industries. From
+            predictive
+            analytics to natural language processing, KodersOT empowers clients with intelligent solutions that optimize
+            efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section id="about" class="bg-white dark:bg-darkBlue">
+    <!-- Productive Container -->
+    <div class="container flex flex-col items-center mx-auto px-6 pt-24 pb-32 md:flex-row md:space-x-16">
+
+      <!-- Content -->
+      <div class="flex flex-col items-start md:w-1/2">
+        <div class="flex flex-col space-y-5">
+          <h4 class="max-w-md text-xl font-bold md:text-4xl">
+            Who We Are
+          </h4>
+          <p class="text-md md:text-lg">
+            KodersOT emerged in 2023 with a clear vision: to revolutionize digital solutions. Our mission is to empower
+            businesses,
+            startups, and entrepreneurs to thrive in the ever-evolving tech landscape. Through close collaboration and
+            relentless
+            dedication, we've honed our expertise in web and mobile technologies. Our passionate team of developers,
+            designers, and
+            strategists is committed to delivering excellence. We understand that each client is unique, which is why we
+            tailor our
+            solutions using cutting-edge technologies. Whether you're a small startup or a large corporation, KodersOT
+            is here to
+            transform your digital journey.
+          </p>
+        </div>
+
+
+      </div>
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="images/illustration-stay-productive.png" alt="" class="mb-10" />
+      </div>
+    </div>
+  </section>
+
+  <!-- What we offer Section -->
+  <section id="about" class="bg-white dark:bg-darkBlue">
+    <!-- Productive Container -->
+    <div class="container flex flex-col items-center mx-auto px-6 pt-24 pb-32 md:flex-row md:space-x-16">
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="images/illustration-stay-productive.png" alt="" class="mb-10" />
+      </div>
+      <!-- Content -->
+      <div class="flex flex-col items-start md:w-1/2">
+        <div class="flex flex-col space-y-5">
+          <h4 class="max-w-md text-xl font-bold md:text-4xl">
+            What We Offer
+          </h4>
+          <p class="text-md md:text-lg">
+            At KodersOT, we're more than developers; we're your strategic partners in digital innovation.
+          </p>
+
+          <p class="text-md md:text-lg">
+            We dive deep into your challenges, crafting bespoke software solutions that drive your business forward.
+            Expect more
+            than code; expect a committed team dedicated to your success.
+          </p>
+        </div>
+
+        <!-- Link -->
+        <!-- <div class="block mt-4">
+          <a href="#" class="border-b border-accentCyan text-accentCyan">
+            See how KodersOT works
+            <img src="images/icon-arrow.svg" alt="" class="inline pb-2" />
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- How KodersOT works section -->
+  <section id="features" class="pt-12 bg-gray-50 dark:bg-darkBlue1">
+    <!-- Features Container -->
+    <div class="container mx-auto px-6 pb-32">
+      <!-- First Row -->
+      <div class="flex flex-col space-y-24 text-center md:flex-row md:space-y-0">
+        <!-- Item 1 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="https://www.coderslab.com.bd/assets/img/business-tool/Frame-2.svg" alt="" class="h-36 w-36" />
+          </div>
+          <h3 class="text-xl font-bold">Qualified Engineers</h3>
+          <p class="max-w-md">
+            KodersOT comprises a team of seasoned software experts dedicated to maintaining our position as industry
+            leaders. We
+            achieve this by selectively recruiting engineers from prestigious universities.
+          </p>
+        </div>
+        <!-- Item 2 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="https://www.coderslab.com.bd/assets/img/business-tool/Frame-1.svg" alt="" class="h-36 w-36" />
+          </div>
+          <h3 class="text-xl font-bold">Dedicated Team</h3>
+          <p class="max-w-md">
+            Consider our in-house team an extension of yours. We're ready to seamlessly integrate, quickly adapt, and
+            align our
+            objectives with yours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="flex flex-col space-y-24 mt-28 text-center md:flex-row md:space-y-0">
+        <!-- Item 3 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="https://www.coderslab.com.bd/assets/img/business-tool/Group%2087.svg" alt="" class="h-36 w-36" />
+          </div>
+          <h3 class="text-xl font-bold">Collaborative Process</h3>
+          <p class="max-w-md">
+            We function as an integral part of your team, not merely as a vendor. Our aim is to actively engage in a
+            collaborative
+            process to craft the desired product. Throughout every stage, we ensure continuous communication with your
+            team.
+          </p>
+        </div>
+        <!-- Item 4 -->
+        <div class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+            <img src="https://www.coderslab.com.bd/assets/img/business-tool/Group%2088.svg" alt="" class="h-36 w-36" />
+          </div>
+          <h3 class="text-xl font-bold">Continuous Supervision</h3>
+          <p class="max-w-md">
+            Throughout the entire lifecycle of your project, a dedicated project manager will oversee planning,
+            organization,
+            control, and deployment of essential deliverables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-gray-50 dark:bg-darkBlue">
+    <!-- Testimonials Container -->
+    <div class="container mx-auto px-6 pt-12 pb-80 md:pb-96">
+      <!-- Boxes Container -->
+      <div class="relative flex flex-col w-full space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+        <!-- Quotes Image -->
+        <img src="images/bg-quotes.png" alt="" class="absolute left-1 -top-2 w-10 md:-top-16 md:w-20" />
+
+        <!-- Box 1 -->
+        <div class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+          <p class="text-sm leading-5 md:text-lg">
+            KodersOT has improved our team productivity by an order of magnitude.
+            Since making the switch our team has become a well-oiled
+            collaboration machine.
+          </p>
+          <!-- Customer Info -->
+          <div class="flex space-x-4">
+            <img src="images/profile-1.jpg" alt="" class="w-10 h-10 rounded-full" />
+            <div>
+              <h5 class="text-sm font-semibold">Satish Patel</h5>
+              <p class="text-xs font-extralight">Founder & CEO. Huddle</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+          <p class="text-sm leading-5 md:text-lg">
+            Fast response with the dev team. From time to time We run into troubles (especially in the beginning), and
+            support
+            provides answers to every point of our inquiry.
+          </p>
+          <!-- Customer Info -->
+          <div class="flex space-x-4">
+            <img src="images/profile-2.jpg" alt="" class="w-10 h-10 rounded-full" />
+            <div>
+              <h5 class="text-sm font-semibold">Saidur Hossen</h5>
+              <p class="text-xs font-extralight">Founder AmrNet</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+          <p class="text-sm leading-5 md:text-lg">
+            KodersOT is on point. They are currently helping me with website design and the results have been incredible
+            Definitely recommend using them.
+          </p>
+          <!-- Customer Info -->
+          <div class="flex space-x-4">
+            <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full" />
+            <div>
+              <h5 class="text-sm font-semibold">Eva Boyd</h5>
+              <p class="text-xs font-extralight">Founder & CEO. Solana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="relative px-6 dark:bg-darkBlue2 md:px-0">
+    <div
+      class="relative -top-40 max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-lg bg-gray-200 dark:bg-darkBlue1 md:px-16">
+      <h5 class="text-2xl font-bold">Get in touch with KodersOT</h5>
+      <p class="text-sm">
+        Reach out to us today to discuss your project needs or inquire about our services. We're here to help you every
+        step of
+        the way.
+      </p>
+      <!-- Input & Button Container -->
+      <div class="flex flex-col items-start space-y-6 md:flex-row md:space-y-0 md:space-x-6">
+        <div class="w-full md:flex-1">
+          <input type="text" class="w-full px-10 py-3 rounded-full focus:outline-none"
+            placeholder="email@example.com" />
+        </div>
+
+        <button class="w-full p-3 px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-darkBlue2 text-white">
+    <div class="container mx-auto pt-12 px-5 pb-10">
+      <!-- Flex Container For All Items -->
+      <div class="flex flex-col justify-between space-y-24 md:flex-row md:space-y-0">
+        <!-- Email & Phone -->
+        <div class="mt-10 space-y-6">
+          <div class="flex items-center space-x-3 md:-mt-10">
+            <div class="w-6">
+              <img src="images/icon-phone.svg" alt="" class="scale-10" />
+            </div>
+            <div>+8801876980021</div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-6">
+              <img src="images/icon-email.svg" alt="" class="scale-10" />
+            </div>
+            <div>KodersOT@gmail.com</div>
+          </div>
+        </div>
+
+        <!-- Menus -->
+        <div class="flex flex-col space-y-10 text-xl md:text-base md:space-x-20 md:space-y-0 md:flex-row">
+          <div class="flex flex-col space-y-3">
+            <a href="#about">About</a>
+            <a href="#">Jobs</a>
+            <a href="#">Press</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="flex flex-col space-y-3">
+            <a href="#contact">Contact Us</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="flex justify-center pb-10 space-x-3">
+          <div>
+            <a href="https://www.facebook.com/profile.php?id=100090957968461" target="_blank">
+              <img src="images/facebook.svg" alt="" class="p-2 bg-darkBlue rounded-full ficon" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/koders-ot/?viewAsMember=true" target="_blank">
+              <img src="images/linkedin.svg" alt="" class="p-2 bg-darkBlue rounded-full ficon w-10 h-10" />
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
